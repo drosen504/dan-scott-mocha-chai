@@ -29,26 +29,11 @@ describe('fizzBuzzer', function() {
   it('should raise an error if argument is not a number', function(){
     const badInputs = 
       ['arr', true, '3'];
-      //  function(badInputs){
-      //    fizzBuzzer(badInputs).should.throw(Error);
-      //  };   
+ 
     badInputs.forEach(function(input){
-      (function(){
-        (fizzBuzzer(input)).should.be(Error);
-      });
+      (function () {
+        fizzBuzzer(input);
+      }).should.throw(Error);
     });
   });
 });
-//   badInputs.forEach(function(input) {
-// (function () {
-//     adder(input[0], input[1]);
-// }).should.throw(Error);
-//         });
-// });
-
-// const fizzBuzzInputs = [15, 30, 45];
-// fizzBuzzInputs.forEach(function(input) {
-//     const answer = fizzBuzzer(input);
-
-// }
-// answer.should.be.
